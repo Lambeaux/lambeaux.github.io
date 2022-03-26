@@ -1,1 +1,114 @@
-Hello
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="toc.css">
+</head>
+
+<body>
+
+<div class="toc">
+
+<div class="toc-section">
+<p>Lambeaux</p>
+
+<ul>
+	<li>
+    <div class="folder">
+  		<span class="arrow_box_right"></span>
+      <a class="accordion" href="#">Career Highlights</a>
+    </div>
+    <div class="panel">
+      <ul>
+        <li><a class="accordion" href="#">Intelligence Community</a></li>
+        <li><a class="accordion" href="#">Mortgage Industry</a></li>
+      </ul>
+    </div>
+	</li>
+  <li>
+    <div class="folder">
+      <span class="arrow_box_right"></span>
+      <a class="accordion" href="#">Personal Projects</a>
+    </div>
+    <div class="panel">
+      <ul>
+        <li><a class="accordion" href="#">osg-eyes</a></li>
+        <li><a class="accordion" href="#">test.async</a></li>
+        <li><a class="accordion" href="#">clojure-bot</a></li>
+      </ul>
+    </div>
+  </li>
+  <li>
+    <div class="folder">
+      <span class="arrow_box_right"></span>
+      <a class="accordion" href="#">Skills</a>
+    </div>
+    <div class="panel">
+      <ul>
+        <li><a class="accordion" href="#">Software Engineering</a></li>
+        <li><a class="accordion" href="#">Programming Languages</a></li>
+        <li><a class="accordion" href="#">Databases</a></li>
+        <li><a class="accordion" href="#">DevOps</a></li>
+      </ul>
+    </div>
+  </li>
+</ul>
+</div>
+
+<hr/>
+
+<div class="toc-section">
+<p>Publications</p>
+
+<ul>
+  <li><a class="accordion" href="#">Blog</a></li>
+  <li><a class="accordion" href="#">Papers</a></li>
+</ul>
+</div>
+
+<hr/>
+
+<div class="toc-section">
+<p>Resources</p>
+  <ul>
+    <li><a class="accordion" href="#">Resume</a></li>
+    <li>
+	    <div class="folder">
+	      <span class="arrow_box_right"></span>
+	      <a class="accordion" href="#">Social Media</a>
+	    </div>
+	    <div class="panel">
+	      <ul class="bug">
+	      	<!-- 
+	      		    Ah, so you've taken the bait :) I know my Boo <3
+
+	      		    Erin Margaret Stipp ... will you marry me?
+	      	-->
+	        <li><a class="accordion" href="#">LinkedIn</a></li>
+	        <li><a class="accordion" href="#">GitHub</a></li>
+	        <li><a class="accordion" href="#">StackOverflow</a></li>
+	      </ul>
+	    </div>
+    </li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+var acc = document.getElementsByClassName("folder");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        var firstChild = this.firstElementChild;
+        firstChild.classList.toggle("arrow_box_right");
+        firstChild.classList.toggle("arrow_box_down");
+        firstChild.nextElementSibling.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+</script>
+
+</body>
+</html>
